@@ -1,13 +1,5 @@
 
-# uvicorn app.main:app --reload
-# 11:08:00 1
-
-
-
-
 from fastapi import FastAPI
-from . import models
-from .database import engine
 from .routers import post, user, ath, vote
 from fastapi.middleware.cors import CORSMiddleware
 
@@ -33,8 +25,7 @@ app.include_router(vote.router)
 # welcome sing
 @app.get("/")
 def welcome():
-    return {'message': 'Welcome to my api'}
-
+    return 'Welcome to my. If you want more userfriendly experience, then type after our URL /docs'
 
 
 
